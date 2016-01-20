@@ -43,8 +43,8 @@
    <script>
 
       queue()
-          .defer(d3.json, 'folium/day_night.geojson')
-          .defer(d3.json, 'folium/day_night_now.geojson')
+          .defer(d3.json, 'day_night.geojson')
+          .defer(d3.json, 'day_night_now.geojson')
           .await(makeMap)
 
       function onEachFeature(feature, layer) {
@@ -82,20 +82,20 @@
           
           function style_1(feature) {
     return {
-        fillColor: 'blue',
+        fillColor: 'Orange',
         weight: 1,
         opacity: 1,
-        color: 'black',
+        color: 'Orange',
         fillOpacity: 0.6
     };
 }
           
           function style_2(feature) {
     return {
-        fillColor: 'blue',
+        fillColor: 'Blue',
         weight: 1,
         opacity: 1,
-        color: 'black',
+        color: 'Blue',
         fillOpacity: 0.6
     };
 }
