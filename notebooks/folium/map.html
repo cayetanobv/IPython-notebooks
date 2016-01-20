@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js" charset="utf-8"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.min.js"></script>
+
+   
+   
+   
+   
+
+   <style>
+
+      html, body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      .legend {
+          padding: 0px 0px;
+          font: 10px sans-serif;
+          background: white;
+          background: rgba(255,255,255,0.8);
+          box-shadow: 0 0 15px rgba(0,0,0,0.2);
+          border-radius: 5px;
+      }
+
+      .key path {
+        display: none;
+      }
+
+   </style>
+</head>
+
+<body>
+
+   <div id="map" style="width: 100%; height: 100%"></div>
+
+   <script>
+
+      queue()
+          .defer(d3.json, 'geodesicline0.geojson')
+          .defer(d3.json, 'geodesicline1.geojson')
+          .defer(d3.json, 'geodesicline2.geojson')
+          .defer(d3.json, 'geodesicline3.geojson')
+          .defer(d3.json, 'geodesicline4.geojson')
+          .defer(d3.json, 'geodesicline5.geojson')
+          .defer(d3.json, 'geodesicline6.geojson')
+          .defer(d3.json, 'geodesicline7.geojson')
+          .await(makeMap)
+
+      function onEachFeature(feature, layer) {
+          // does this feature have a property named popupContent?
+          if (feature.properties && feature.properties.popupContent) {
+              layer.bindPopup(feature.properties.popupContent);
+              }
+          };
+
+      function makeMap(error, gjson_1,gjson_2,gjson_3,gjson_4,gjson_5,gjson_6,gjson_7,gjson_8) {
+
+          
+
+          
+
+          function matchKey(datapoint, key_variable){
+              if (typeof key_variable[0][datapoint] === 'undefined') {
+                  return null;
+              }
+              else {
+                  return parseFloat(key_variable[0][datapoint]);
+              };
+          };
+
+          
+
+          var map = L.map('map').setView([20, 0], 2);
+
+          L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+              maxZoom: 18,
+              minZoom: 1,
+              attribution: 'Map data (c) <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+          }).addTo(map);
+
+          
+          function style_1(feature) {
+    return {
+        fillColor: 'blue',
+        weight: 1,
+        opacity: 1,
+        color: 'Orange',
+        fillOpacity: 0.6
+    };
+}
+          
+          function style_2(feature) {
+    return {
+        fillColor: 'blue',
+        weight: 1,
+        opacity: 1,
+        color: 'Orange',
+        fillOpacity: 0.6
+    };
+}
+          
+          function style_3(feature) {
+    return {
+        fillColor: 'blue',
+        weight: 1,
+        opacity: 1,
+        color: 'Orange',
+        fillOpacity: 0.6
+    };
+}
+          
+          function style_4(feature) {
+    return {
+        fillColor: 'blue',
+        weight: 1,
+        opacity: 1,
+        color: 'Orange',
+        fillOpacity: 0.6
+    };
+}
+          
+          function style_5(feature) {
+    return {
+        fillColor: 'blue',
+        weight: 1,
+        opacity: 1,
+        color: 'Orange',
+        fillOpacity: 0.6
+    };
+}
+          
+          function style_6(feature) {
+    return {
+        fillColor: 'blue',
+        weight: 1,
+        opacity: 1,
+        color: 'Orange',
+        fillOpacity: 0.6
+    };
+}
+          
+          function style_7(feature) {
+    return {
+        fillColor: 'blue',
+        weight: 1,
+        opacity: 1,
+        color: 'Orange',
+        fillOpacity: 0.6
+    };
+}
+          
+          function style_8(feature) {
+    return {
+        fillColor: 'blue',
+        weight: 1,
+        opacity: 1,
+        color: 'Orange',
+        fillOpacity: 0.6
+    };
+}
+          
+
+          
+          gJson_layer_1 = L.geoJson(gjson_1, {style: style_1,onEachFeature: onEachFeature}).addTo(map)
+          
+          gJson_layer_2 = L.geoJson(gjson_2, {style: style_2,onEachFeature: onEachFeature}).addTo(map)
+          
+          gJson_layer_3 = L.geoJson(gjson_3, {style: style_3,onEachFeature: onEachFeature}).addTo(map)
+          
+          gJson_layer_4 = L.geoJson(gjson_4, {style: style_4,onEachFeature: onEachFeature}).addTo(map)
+          
+          gJson_layer_5 = L.geoJson(gjson_5, {style: style_5,onEachFeature: onEachFeature}).addTo(map)
+          
+          gJson_layer_6 = L.geoJson(gjson_6, {style: style_6,onEachFeature: onEachFeature}).addTo(map)
+          
+          gJson_layer_7 = L.geoJson(gjson_7, {style: style_7,onEachFeature: onEachFeature}).addTo(map)
+          
+          gJson_layer_8 = L.geoJson(gjson_8, {style: style_8,onEachFeature: onEachFeature}).addTo(map)
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+      };
+
+   </script>
+</body>
