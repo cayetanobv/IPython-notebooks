@@ -58,7 +58,7 @@ def runTest():
     xsize = 1000
     x = lf.compXVar(xstart, xstop, xsize=xsize)
 
-    l = 2
+    l = 1
     x0 = 0
     k = 1
     y = lf.compLogitFunc(x, l, x0, k=k)
