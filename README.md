@@ -5,3 +5,4 @@ Several IPython notebooks (Jupyter notebooks) examples:
 - [World CO2 emissions - CartoDB](http://nbviewer.jupyter.org/github/cayetanobv/IPython-notebooks/blob/master/notebooks/cartodb_emissions.ipynb)
 - [Playing with map projections - CartoDB](http://nbviewer.jupyter.org/github/cayetanobv/IPython-notebooks/blob/master/notebooks/cartodb_projections.ipynb)
 - [Europe official development assistance as share of gross national income - CartoDB](http://nbviewer.jupyter.org/github/cayetanobv/IPython-notebooks/blob/master/notebooks/cartodb_oda.ipynb)
+- [Logistic function example](http://nbviewer.jupyter.org/github/cayetanobv/IPython-notebooks/blob/master/notebooks/logit_function.ipynb)
