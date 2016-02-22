@@ -1,0 +1,5 @@
+*.pyc
+config.py
+
+# Ignore checkpoints created (especially for the examples)
+notebooks/.ipynb_checkpoints
