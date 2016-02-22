@@ -43,8 +43,14 @@
    <script>
 
       queue()
-          .defer(d3.json, 'folium/day_night.geojson')
-          .defer(d3.json, 'folium/day_night_now.geojson')
+          .defer(d3.json, 'geodesicline0.geojson')
+          .defer(d3.json, 'geodesicline1.geojson')
+          .defer(d3.json, 'geodesicline2.geojson')
+          .defer(d3.json, 'geodesicline3.geojson')
+          .defer(d3.json, 'geodesicline4.geojson')
+          .defer(d3.json, 'geodesicline5.geojson')
+          .defer(d3.json, 'geodesicline6.geojson')
+          .defer(d3.json, 'geodesicline7.geojson')
           .await(makeMap)
 
       function onEachFeature(feature, layer) {
@@ -54,7 +60,7 @@
               }
           };
 
-      function makeMap(error, gjson_1,gjson_2) {
+      function makeMap(error, gjson_1,gjson_2,gjson_3,gjson_4,gjson_5,gjson_6,gjson_7,gjson_8) {
 
           
 
@@ -85,7 +91,7 @@
         fillColor: 'blue',
         weight: 1,
         opacity: 1,
-        color: 'black',
+        color: 'Orange',
         fillOpacity: 0.6
     };
 }
@@ -95,7 +101,67 @@
         fillColor: 'blue',
         weight: 1,
         opacity: 1,
-        color: 'black',
+        color: 'Orange',
+        fillOpacity: 0.6
+    };
+}
+          
+          function style_3(feature) {
+    return {
+        fillColor: 'blue',
+        weight: 1,
+        opacity: 1,
+        color: 'Orange',
+        fillOpacity: 0.6
+    };
+}
+          
+          function style_4(feature) {
+    return {
+        fillColor: 'blue',
+        weight: 1,
+        opacity: 1,
+        color: 'Orange',
+        fillOpacity: 0.6
+    };
+}
+          
+          function style_5(feature) {
+    return {
+        fillColor: 'blue',
+        weight: 1,
+        opacity: 1,
+        color: 'Orange',
+        fillOpacity: 0.6
+    };
+}
+          
+          function style_6(feature) {
+    return {
+        fillColor: 'blue',
+        weight: 1,
+        opacity: 1,
+        color: 'Orange',
+        fillOpacity: 0.6
+    };
+}
+          
+          function style_7(feature) {
+    return {
+        fillColor: 'blue',
+        weight: 1,
+        opacity: 1,
+        color: 'Orange',
+        fillOpacity: 0.6
+    };
+}
+          
+          function style_8(feature) {
+    return {
+        fillColor: 'blue',
+        weight: 1,
+        opacity: 1,
+        color: 'Orange',
         fillOpacity: 0.6
     };
 }
@@ -105,6 +171,18 @@
           gJson_layer_1 = L.geoJson(gjson_1, {style: style_1,onEachFeature: onEachFeature}).addTo(map)
           
           gJson_layer_2 = L.geoJson(gjson_2, {style: style_2,onEachFeature: onEachFeature}).addTo(map)
+          
+          gJson_layer_3 = L.geoJson(gjson_3, {style: style_3,onEachFeature: onEachFeature}).addTo(map)
+          
+          gJson_layer_4 = L.geoJson(gjson_4, {style: style_4,onEachFeature: onEachFeature}).addTo(map)
+          
+          gJson_layer_5 = L.geoJson(gjson_5, {style: style_5,onEachFeature: onEachFeature}).addTo(map)
+          
+          gJson_layer_6 = L.geoJson(gjson_6, {style: style_6,onEachFeature: onEachFeature}).addTo(map)
+          
+          gJson_layer_7 = L.geoJson(gjson_7, {style: style_7,onEachFeature: onEachFeature}).addTo(map)
+          
+          gJson_layer_8 = L.geoJson(gjson_8, {style: style_8,onEachFeature: onEachFeature}).addTo(map)
           
 
           
